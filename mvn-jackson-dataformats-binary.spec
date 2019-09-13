@@ -4,11 +4,17 @@
 #
 Name     : mvn-jackson-dataformats-binary
 Version  : 2.8.1
-Release  : 1
+Release  : 2
 URL      : https://github.com/FasterXML/jackson-dataformats-binary/archive/jackson-dataformats-binary-2.8.1.tar.gz
 Source0  : https://github.com/FasterXML/jackson-dataformats-binary/archive/jackson-dataformats-binary-2.8.1.tar.gz
-Source1  : http://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1/jackson-dataformat-smile-2.8.1.jar
-Source2  : http://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1/jackson-dataformat-smile-2.8.1.pom
+Source1  : http://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.6.6/jackson-dataformat-smile-2.6.6.jar
+Source2  : http://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.6.6/jackson-dataformat-smile-2.6.6.pom
+Source3  : http://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1/jackson-dataformat-smile-2.8.1.jar
+Source4  : http://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1/jackson-dataformat-smile-2.8.1.pom
+Source5  : http://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.10/jackson-dataformat-smile-2.8.10.jar
+Source6  : http://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.10/jackson-dataformat-smile-2.8.10.pom
+Source7  : http://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformats-binary/2.8.1/jackson-dataformats-binary-2.8.1.pom
+Source8  : http://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformats-binary/2.8.10/jackson-dataformats-binary-2.8.10.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -35,11 +41,29 @@ data components for the mvn-jackson-dataformats-binary package.
 %build
 
 %install
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1/jackson-dataformat-smile-2.8.1.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.6.6
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.6.6/jackson-dataformat-smile-2.6.6.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.6.6
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.6.6/jackson-dataformat-smile-2.6.6.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1/jackson-dataformat-smile-2.8.1.pom
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1/jackson-dataformat-smile-2.8.1.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1/jackson-dataformat-smile-2.8.1.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.10
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.10/jackson-dataformat-smile-2.8.10.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.10
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.10/jackson-dataformat-smile-2.8.10.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformats-binary/2.8.1
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformats-binary/2.8.1/jackson-dataformats-binary-2.8.1.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformats-binary/2.8.10
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformats-binary/2.8.10/jackson-dataformats-binary-2.8.10.pom
 
 
 %files
@@ -47,5 +71,11 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/d
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.6.6/jackson-dataformat-smile-2.6.6.jar
+/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.6.6/jackson-dataformat-smile-2.6.6.pom
 /usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1/jackson-dataformat-smile-2.8.1.jar
 /usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.1/jackson-dataformat-smile-2.8.1.pom
+/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.10/jackson-dataformat-smile-2.8.10.jar
+/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.10/jackson-dataformat-smile-2.8.10.pom
+/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformats-binary/2.8.1/jackson-dataformats-binary-2.8.1.pom
+/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformats-binary/2.8.10/jackson-dataformats-binary-2.8.10.pom
